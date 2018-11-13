@@ -12,6 +12,13 @@
 ##### START FUNCTION #####
 ##### NOTE: SET file_list to '' if no file to attach
 
+__author__ = "Trevor Gurgick"
+__copyright__ = "Copyright (c) 2018, Trevor Gurgick"
+
+__license__ = "GPL"
+__version__ = "1.1"
+__status__ = "active"
+
 def send(name,recipients,subject,body,gmail_user,gmail_pwd,file_list):
 	
 	import requests,datetime,sys,json,base64,csv,smtplib,os
