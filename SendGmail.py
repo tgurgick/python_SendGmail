@@ -19,15 +19,15 @@ __license__ = "GPL"
 __version__ = "1.1"
 __status__ = "active"
 
+import requests,datetime,sys,json,base64,csv,smtplib,os
+from email.mime.multipart import MIMEMultipart #for email
+from email.mime.text import MIMEText #for email
+from email.mime.image import MIMEImage #for email
+from email.mime.base import MIMEBase #for email
+from email import encoders
+from dateutil import parser
+
 def send(name,recipients,subject,body,gmail_user,gmail_pwd,file_list):
-	
-	import requests,datetime,sys,json,base64,csv,smtplib,os
-	from email.mime.multipart import MIMEMultipart #for email
-	from email.mime.text import MIMEText #for email
-	from email.mime.image import MIMEImage #for email
-	from email.mime.base import MIMEBase #for email
-	from email import encoders
-	from dateutil import parser
 
 	recipients = recipients.split(",")
 	cwd = os.getcwd()
